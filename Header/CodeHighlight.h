@@ -18,13 +18,13 @@ private:
     sf::RectangleShape introBackground;
 
     float background_x = 860;
-    float background_y = 450;
+    float background_y = 395;
     float background_width = 370;
-    float background_height = 300;
+    float background_height = 380;
 
     float lineDistance = 30;
     float text_start_x = 870;
-    float text_start_y = 495;
+    float text_start_y = 440;
     int characterSize = 17;
 
     sf::Color characterIntroColor = sf::Color(240, 180, 10, 255); // yellow orange
@@ -38,11 +38,13 @@ private:
 
 public:
     std::vector<int> currentLines; // current lines to highlight
+    std::vector<std::vector<int>> array_currentLines; 
     std::vector<std::string> codeStrings;
     std::vector<sf::Text> codes;
     std::vector<sf::RectangleShape> highlightBlock;
     sf::Text introText;
     bool isHiding = 1;
+    int idx_currentLines = -1;
 
 
     CodeHighlight(float scale_x, float scale_y, std::map<std::string, sf::Color> *Colors);
@@ -54,6 +56,8 @@ public:
     void updateTexts();
     void formatText(sf::Text *text, int idx);
 
+    void prev_currentLines();
+    void next_currentLines(std::vector<int> new_currentLines);
     void resetHighlight();
 
     void updateHighlight();
