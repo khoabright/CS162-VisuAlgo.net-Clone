@@ -52,7 +52,6 @@ void Game::initWindow()
 
 void Game::initKeys()
 {   
-
     std::ifstream ifs("Config/supported_keys.ini"); 
     
     if (ifs.is_open())

@@ -24,9 +24,7 @@ CodeHighlight::CodeHighlight(float scale_x, float scale_y, std::map<std::string,
     introText.setCharacterSize((int)(characterSize + 3 * scale_y));
     introText.setFillColor(characterIntroColor);
     introText.setFont(font);
-    // introText.setStyle(introText.Bold);
     introText.setPosition(text_start_x, background_y + 7 * scale_y);
-    // std::cout<<text_start_x<<' '<<background_y+7*scale_y<<'\n';
 
     introBackground.setSize(sf::Vector2f(background_width, lineDistance + 10 * scale_y));
     introBackground.setPosition(background_x, background_y);
@@ -36,13 +34,11 @@ CodeHighlight::CodeHighlight(float scale_x, float scale_y, std::map<std::string,
     background.setSize(sf::Vector2f(background_width, background_height));
     background.setPosition(background_x, background_y);
 
-    // next_currentLines({});
     reset();
 }
 
 CodeHighlight::~CodeHighlight()
 {
-    // delete Colors;
 }
 
 void CodeHighlight::reset()
