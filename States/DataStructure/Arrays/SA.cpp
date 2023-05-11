@@ -1269,17 +1269,6 @@ void SA::render(sf::RenderTarget *target)
 
     if (capacity > 0)
         target->draw(arr_name);
-
-    // REMOVE LATER!!!
-    // sf::Text mouseText;
-    // mouseText.setPosition(this->mousePosView.x, this->mousePosView.y - 50);
-    // mouseText.setFont(this->font);
-    // mouseText.setCharacterSize(20);
-    // std::stringstream ss;
-    // ss << this->mousePosView.x << " " << this->mousePosView.y;
-    // mouseText.setString(ss.str());
-
-    // target->draw(mouseText);
 }
 
 void SA::reset()

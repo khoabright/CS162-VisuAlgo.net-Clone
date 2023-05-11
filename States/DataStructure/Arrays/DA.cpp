@@ -1457,17 +1457,6 @@ void DA::render(sf::RenderTarget *target)
         target->draw(arr_name);
     if (show_new_label > 0 && new_capacity > 0)
         target->draw(new_arr_name);
-
-    // REMOVE LATER!!!
-    // sf::Text mouseText;
-    // mouseText.setPosition(this->mousePosView.x, this->mousePosView.y - 50);
-    // mouseText.setFont(this->font);
-    // mouseText.setCharacterSize(20);
-    // std::stringstream ss;
-    // ss << this->mousePosView.x << " " << this->mousePosView.y;
-    // mouseText.setString(ss.str());
-
-    // target->draw(mouseText);
 }
 
 void DA::reset()
