@@ -12,6 +12,8 @@ class State
 private:
 
 protected:
+    sf::Cursor handCursor;
+    sf::Cursor arrowCursor;
     std::mt19937_64 randomize;
 
     std::stack<State*>* states;

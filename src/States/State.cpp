@@ -2,6 +2,9 @@
 
 State::State(sf::RenderWindow *window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states)
 {   
+    handCursor.loadFromSystem(sf::Cursor::Hand);
+    arrowCursor.loadFromSystem(sf::Cursor::Arrow);
+
     this->window = window;
     float width = this->window->getSize().x;
     float height = this->window->getSize().y;

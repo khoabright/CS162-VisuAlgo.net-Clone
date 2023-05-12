@@ -440,17 +440,14 @@ void DataStructure::updateCursor()
     }
 
     /*  Show Mouse Cursor */
-    sf::Cursor cursor;
     if (isHandCursor)
     {
-        cursor.loadFromSystem(sf::Cursor::Hand);
+        this->window->setMouseCursor(handCursor);
     }
     else
     {
-        cursor.loadFromSystem(sf::Cursor::Arrow);
+        this->window->setMouseCursor(arrowCursor);
     }
-
-    this->window->setMouseCursor(cursor);
 }
 
 void DataStructure::updateTexts()
